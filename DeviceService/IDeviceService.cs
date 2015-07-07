@@ -12,7 +12,7 @@ namespace DeviceService
     public interface IDeviceService
     {
         [OperationContract]
-        [WebInvoke(Method="GET",
+        [WebInvoke(Method="POST",
             ResponseFormat=WebMessageFormat.Json,
             BodyStyle=WebMessageBodyStyle.Wrapped,
             UriTemplate="RegisterDevice")]
