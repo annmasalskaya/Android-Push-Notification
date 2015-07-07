@@ -9,7 +9,8 @@ namespace Android_Push_Notifications.Models
     public class User
     {
         [Required]
-        public int Id { get; set; }
+        [Key]
+        public int userId { get; set; }
 
         [Required]
         [Display(Name = "Login")]
