@@ -68,10 +68,10 @@
       <DependentUpon>DeviceService.svc</DependentUpon>
     </Compile>
     <Compile Include="IDeviceService.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
