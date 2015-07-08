@@ -14,7 +14,6 @@ namespace Android_Push_Notifications.Models
         [Required]
         [Display(Name = "UserId")]
         public int userID { get; set; } 
-        [Required]
        
         [Required]
         [DataType(DataType.Text)]
