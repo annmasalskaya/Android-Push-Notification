@@ -1,4 +1,4 @@
-﻿using DAL.Interfacies.DTO;
+﻿using DAL.Interfacies.Entites;
 using System;
 using System.Collections.Generic;
 using System.Linq;

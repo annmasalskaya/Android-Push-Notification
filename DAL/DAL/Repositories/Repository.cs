@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.DAL.Repositories
+namespace DAL.Repositories
 {
-    class Repository<T> : IRepository<T> 
+    class Repository<TEntity> : IRepository<TEntity> 
     { 
          
     }

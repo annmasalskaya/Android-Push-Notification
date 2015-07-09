@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Interfacies.DTO
+namespace DAL.Interfacies.Entites
 {
-    class DalDevice : IEntity
+    class Device : IEntity
     {
-        
         public int Id { get; set; }
 
-        public int userID { get; set; }
+        public int UserID { get; set; }
 
         public string RegistrationId { get; set; }
         
