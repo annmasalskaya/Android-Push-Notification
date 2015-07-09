@@ -6,7 +6,7 @@ using System.Text;
 using System.Data.Entity;
 using System.Threading.Tasks;
 
-namespace DAL.DAL.UnitOfWork
+namespace DAL.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
