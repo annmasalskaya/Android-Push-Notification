@@ -39,7 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL.Interfaces\Services\IDeviceService.cs" />
+    <Compile Include="BLL.Interfaces\Services\IUserService.cs" />
+    <Compile Include="BLL\Services\DeviceService.cs" />
+    <Compile Include="BLL\Services\UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{81e1ad2d-43e3-4f93-8a66-61014d7f24ef}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
