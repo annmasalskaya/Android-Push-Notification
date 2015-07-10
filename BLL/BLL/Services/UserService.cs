@@ -25,7 +25,5 @@ namespace BLL.Services
             _unit.Commit();
             return createdUser;
         }
-
-      
     }
 }

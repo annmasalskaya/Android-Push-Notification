@@ -43,6 +43,7 @@
     <Compile Include="BLL.Interfaces\Services\IUserService.cs" />
     <Compile Include="BLL\Services\DeviceService.cs" />
     <Compile Include="BLL\Services\UserService.cs" />
+    <Compile Include="Exceptions\UserNotExistException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

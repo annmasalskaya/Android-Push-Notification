@@ -1,6 +1,6 @@
-﻿using DAL.Entites.Entites;
+﻿using DAL.Interfaces.Entites;
 
-namespace DAL.Entites.Repositories
+namespace DAL.Interfaces.Repositories
 {
     interface IDeviceRepository : IGenericRepository<BaseEntity>
     {

@@ -1,8 +1,8 @@
-﻿using DAL.Entites.Entites;
+﻿using DAL.Interfaces.Entites;
 
-namespace DAL.Entites.Repositories
+namespace DAL.Interfaces.Repositories
 {
-    interface IUserRepository: IGenericRepository<BaseEntity>
+    interface IUserRepository : IGenericRepository<BaseEntity>
     {
         BaseEntity GetBy(string login);
     }

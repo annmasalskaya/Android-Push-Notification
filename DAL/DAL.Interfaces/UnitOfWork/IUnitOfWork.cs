@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DAL.Entites.UnitOfWork
+namespace DAL.Interfaces.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {

@@ -1,6 +1,6 @@
-﻿namespace DAL.Entites.Entites
+﻿namespace DAL.Interfaces.Entites
 {
-    public abstract class BaseEntity: IEntity
+    public abstract class BaseEntity : IEntity
     {
         public int Id { get; set; }
     }

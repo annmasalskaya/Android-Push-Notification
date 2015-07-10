@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using DAL.Entites.Entites;
+using DAL.Interfaces.Entites;
 
-namespace DAL.Entites.Repositories
+namespace DAL.Interfaces.Repositories
 {
     public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
