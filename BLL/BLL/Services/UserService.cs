@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using BLL.Interfaces.Services;
 using DAL.Entites;
-using DAL.Repositories;
+using DAL.Interfaces.Repositories;
 using DAL.Interfaces.UnitOfWork;
 
 namespace BLL.Services

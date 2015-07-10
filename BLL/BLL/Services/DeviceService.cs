@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BLL.Exceptions;
 using BLL.Interfaces.Services;
 using DAL.Entites;
-
+using DAL.Interfaces.Repositories;
 using DAL.Interfaces.UnitOfWork;
-using DAL.Repositories;
-using BLL.Exceptions;
 
 namespace BLL.Services
 {
     public class DeviceService : IDeviceService
     {
-        // TODO IDeviceRepository IUserRepository
-        DeviceRepository _deviceRepository;
-        UserRepository _userRepository;
+        IDeviceRepository _deviceRepository;
+        IUserRepository _userRepository;
         IUnitOfWork _unit;
 
-        public DeviceService(DeviceRepository deviceRepository, UserRepository userRepository, IUnitOfWork unit)
+        public DeviceService(IDeviceRepository deviceRepository, IUserRepository userRepository, IUnitOfWork unit)
         {
             _deviceRepository = deviceRepository;
             _userRepository = userRepository;
