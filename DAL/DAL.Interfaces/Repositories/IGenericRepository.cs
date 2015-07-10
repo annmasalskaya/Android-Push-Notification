@@ -6,7 +6,7 @@ using DAL.Interfaces.Entites;
 
 namespace DAL.Interfaces.Repositories
 {
-    public interface IGenericRepository<TEntity> where TEntity : IEntity
+    public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate);
