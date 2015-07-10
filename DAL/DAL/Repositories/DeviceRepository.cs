@@ -7,7 +7,7 @@ using DAL.Entites;
 
 namespace DAL.Repositories
 {
-    public class DeviceRepository : GenericRepository<Device>, IDeviceRepository
+    public class DeviceRepository : GenericRepository<Device>
     {
         public DeviceRepository(DbContext context)
             : base(context)

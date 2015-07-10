@@ -49,8 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL.Interfaces\Repositories\IDeviceRepository.cs" />
-    <Compile Include="DAL.Interfaces\Repositories\IUserRepository.cs" />
     <Compile Include="DAL.Interfaces\Entites\BaseEntity.cs" />
     <Compile Include="DAL\Entites\Device.cs" />
     <Compile Include="DAL.Interfaces\Entites\IEntity.cs" />

@@ -44,9 +44,10 @@
     <Compile Include="BLL\Services\DeviceService.cs" />
     <Compile Include="BLL\Services\UserService.cs" />
     <Compile Include="Exceptions\UserNotExistException.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{81e1ad2d-43e3-4f93-8a66-61014d7f24ef}</Project>
