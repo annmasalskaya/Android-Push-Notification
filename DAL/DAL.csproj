@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,23 +48,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="DAL\Repositories\Repository.cs" />
+    <Compile Include="DAL\Entites\BaseEntity.cs" />
+    <Compile Include="DAL\Entites\Device.cs" />
+    <Compile Include="DAL.Interfaces\Entites\IEntity.cs" />
+    <Compile Include="DAL\Entites\User.cs" />
+    <Compile Include="DAL.Interfaces\Repositories\IGenericRepository.cs" />
+    <Compile Include="DAL.Interfaces\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="DAL\Repositories\DeviceRepository.cs" />
+    <Compile Include="DAL\Repositories\GenericRepository.cs" />
+    <Compile Include="DAL\Repositories\UserRepository.cs" />
+    <Compile Include="ApplicationDbContext\ApplicationDbContext.cs" />
     <Compile Include="DAL\UnitOfWork\UnitOfWork.cs" />
-    <Compile Include="Interfacies\DTO\DalDevice.cs" />
-    <Compile Include="Interfacies\DTO\DalUser.cs" />
-    <Compile Include="Interfacies\DTO\IEntity.cs" />
-    <Compile Include="Interfacies\Repositories\IDeviceRepository.cs" />
-    <Compile Include="Interfacies\Repositories\IRepository.cs" />
-    <Compile Include="Interfacies\Repositories\IUserRepository.cs" />
-    <Compile Include="Interfacies\UnitOfWork\IUnitOfWork.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\Mappers\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

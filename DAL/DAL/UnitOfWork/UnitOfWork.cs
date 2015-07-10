@@ -1,41 +1,38 @@
-﻿using DAL.Interfacies.UnitOfWork;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Data.Entity;
-using System.Threading.Tasks;
+using DAL.Interfaces.UnitOfWork;
 
 namespace DAL.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public DbContext Context { get; private set; }
+        DbContext _dbContext;
 
-        public UnitOfWork(DbContext context)
+        public UnitOfWork(DbContext dbContext)
         {
-            Context = context;
+            _dbContext = dbContext;
         }
 
-        public void Commit()
+        public int Commit()
         {
-            if (Context != null)
-            {
-                Context.SaveChanges();
-            }
+            return _dbContext.SaveChanges();
         }
 
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         private void Dispose(bool disposing)
         {
-            if (!disposing) return;
-            if (Context != null)
+            if (disposing)
             {
-                Context.Dispose();
+                if (_dbContext != null)
+                {
+                    _dbContext.Dispose();
+                    _dbContext = null;
+                }
             }
         }
     }
