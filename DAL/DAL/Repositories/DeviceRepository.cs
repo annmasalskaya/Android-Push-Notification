@@ -13,5 +13,10 @@ namespace DAL.Repositories
         {
 
         }
+        
+        public IEnumerable<Device> GetBy(int userId)
+        {
+            return GetBy(d => d.UserId == userId);
+        }
     }
 }
