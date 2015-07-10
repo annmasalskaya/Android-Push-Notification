@@ -1,7 +1,4 @@
-﻿using DAL.Interfaces.Entites;
-
-
-namespace DAL.Entites
+﻿namespace DAL.Entites.Entites
 {
     public abstract class BaseEntity: IEntity
     {

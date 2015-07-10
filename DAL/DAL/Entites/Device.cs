@@ -1,10 +1,10 @@
-﻿using DAL.Interfaces.Entites;
+﻿using DAL.Entites.Entites;
 
 namespace DAL.Entites
 {
     public class Device : BaseEntity
     {
-        public int UserID { get; set; }
+        public int UserId { get; set; }
 
         public string RegistrationId { get; set; }
         

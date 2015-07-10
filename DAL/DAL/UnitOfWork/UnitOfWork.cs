@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
-using DAL.Interfaces.UnitOfWork;
+using DAL.Entites.UnitOfWork;
 
 namespace DAL.UnitOfWork
 {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using DAL.Interfaces.Entites;
+using DAL.Entites.Entites;
 
-namespace DAL.Interfaces.Repositories
+namespace DAL.Entites.Repositories
 {
-    public interface IGenericRepository<TEntity> where TEntity : IEntity
+    public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate);
