@@ -3,7 +3,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace DeviceService
+namespace RestService
 {
     [DataContract]
     public class DeviceInfoContract

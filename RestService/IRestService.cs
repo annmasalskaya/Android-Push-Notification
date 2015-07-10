@@ -6,10 +6,10 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace DeviceService
+namespace RestService
 {
     [ServiceContract]
-    public interface IDeviceService
+    public interface IRestService
     {
         [OperationContract]
         [WebInvoke(Method="POST",

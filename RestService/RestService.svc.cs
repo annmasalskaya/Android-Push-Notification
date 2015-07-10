@@ -6,9 +6,9 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace DeviceService
+namespace RestService
 {
-    public class DeviceService: IDeviceService
+    public class RestService: IRestService
     {
         public string RegisterDevice(DeviceInfoContract deviceInfo)
         {
