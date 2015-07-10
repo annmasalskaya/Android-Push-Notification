@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using BLL.Interfaces.Services;
 using DAL.Entites;
-using DAL.Interfaces.Repositories;
+using DAL.Repositories;
 using DAL.Interfaces.UnitOfWork;
 
 namespace BLL.Services
 {
     public class UserService: IUserService
     {
-        IGenericRepository<User> _repository;
+        IUserRepository _repository;
         IUnitOfWork _unit;
 
-        public UserService(IGenericRepository<User> repository, IUnitOfWork unit)
+        public UserService(IUserRepository repository, IUnitOfWork unit)
         {
             _repository = repository;
             _unit = unit;
