@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="BLL.Interfaces\Services\IDeviceService.cs" />
     <Compile Include="BLL.Interfaces\Services\IUserService.cs" />
+    <Compile Include="BLL\Entites\Device.cs" />
+    <Compile Include="BLL\Entites\User.cs" />
     <Compile Include="BLL\Services\DeviceService.cs" />
     <Compile Include="BLL\Services\UserService.cs" />
     <Compile Include="Exceptions\UserNotExistException.cs" />

@@ -1,0 +1,34 @@
+﻿@model Android_Push_Notifications.Models.DeviceModel;
+ 
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<div>
+    <h4>DeviceModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imei)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imei)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
