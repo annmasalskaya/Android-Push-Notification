@@ -10,11 +10,5 @@ namespace DAL.ApplicationDbContext
     {
         DbSet<User> users { get; set; }
         DbSet<Device> devices { get; set; }
-
-        public ApplicationDbContext()
-            : base("name=DbConnectionString")
-        {
-            Database.SetInitializer<ApplicationDbContext>(null);
-        }
     }
 }
