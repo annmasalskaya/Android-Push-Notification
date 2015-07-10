@@ -7,6 +7,6 @@ namespace BLL.Interfaces.Services
 {
     public interface IUserService
     {
-        public User Create(User user);
+         User Create(User user);
     }
 }
