@@ -4,18 +4,18 @@ using System.Linq;
 using BLL.Exceptions;
 using BLL.Interfaces.Services;
 using DAL.Entites;
-using DAL.Repositories;
+using DAL.Interfaces.Repositories;
 using DAL.Interfaces.UnitOfWork;
 
 namespace BLL.Services
 {
     public class DeviceService : IDeviceService
     {
-        DeviceRepository _deviceRepository;
-        UserRepository _userRepository;
+        IDeviceRepository _deviceRepository;
+        IUserRepository _userRepository;
         IUnitOfWork _unit;
 
-        public DeviceService(DeviceRepository deviceRepository, UserRepository userRepository, IUnitOfWork unit)
+        public DeviceService(IDeviceRepository deviceRepository, IUserRepository userRepository, IUnitOfWork unit)
         {
             _deviceRepository = deviceRepository;
             _userRepository = userRepository;
