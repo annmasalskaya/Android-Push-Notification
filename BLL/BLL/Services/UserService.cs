@@ -24,6 +24,12 @@ namespace BLL.Services
             return _repository.GetAll();
         }
 
+
+        public User GetBy(string login)
+        {
+            return _repository.GetBy(login);
+        }
+
         public User Create(User user)
         {
             var createdUser = _repository.Create(user);

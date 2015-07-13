@@ -21,26 +21,14 @@ namespace BLL.Services
             _userRepository = userRepository;
             _unit = unit;
         }
-
         //TODO use DeviceViewModel ?
-        public Device Create(Device device, User owner)
+        public Device Create(Device device)
         {
-            var user = _userRepository.GetBy(owner.Login);
-            if(user!=null)
-            {
-               var newDevice = new Device {
-                   RegistrationId = device.RegistrationId,
-                   Imei = device.Imei,
-                   UserId = owner.Id
-               };
-               newDevice = _deviceRepository.Create(newDevice);
+            
+               var newDevice = _deviceRepository.Create(device);
                _unit.Commit();
                return newDevice;
-            }
-            else
-            {
-                throw new UserNotExistException();
-            }
+           
         }
 
         // TODO List<Device> ?

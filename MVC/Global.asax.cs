@@ -18,6 +18,8 @@ namespace Android_Push_Notifications
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             Mapper.CreateMap<User, UserModel>();
             Mapper.CreateMap<UserModel, User>();
+
+         
         }
     }
 }

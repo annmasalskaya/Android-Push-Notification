@@ -25,6 +25,8 @@ namespace DependencyResolver
 
             Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
             Bind<DbContext>().To<ApplicationDbContext>().InRequestScope();
+
+            
         }
     }
 }

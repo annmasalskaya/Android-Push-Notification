@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{81E1AD2D-43E3-4F93-8A66-61014D7F24EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{6BC8596E-8FDA-42F8-81A6-737273C4CEEA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestService", "RestService\RestService.csproj", "{EF9F08CF-518B-40FE-B7C2-522103A269BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{C0586636-DBD3-4367-BC88-A9797C444519}"
 EndProject
@@ -27,10 +25,6 @@ Global
 		{6BC8596E-8FDA-42F8-81A6-737273C4CEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC8596E-8FDA-42F8-81A6-737273C4CEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC8596E-8FDA-42F8-81A6-737273C4CEEA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF9F08CF-518B-40FE-B7C2-522103A269BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF9F08CF-518B-40FE-B7C2-522103A269BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF9F08CF-518B-40FE-B7C2-522103A269BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF9F08CF-518B-40FE-B7C2-522103A269BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0586636-DBD3-4367-BC88-A9797C444519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C0586636-DBD3-4367-BC88-A9797C444519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0586636-DBD3-4367-BC88-A9797C444519}.Release|Any CPU.ActiveCfg = Release|Any CPU

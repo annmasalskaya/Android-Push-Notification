@@ -7,7 +7,7 @@ namespace BLL.Interfaces.Services
 {
     public interface IDeviceService
     {
-         Device Create(Device device, User user);
+         Device Create(Device device);
          IEnumerable<Device> GetAllByUser(User user);
     }
 }
