@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="DeviceService.RestService" CodeBehind="RestService.svc.cs" %>
