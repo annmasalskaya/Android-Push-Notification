@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Users</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -29,7 +29,7 @@
             @Html.DisplayFor(modelItem => item.Password)
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new { user = item }) 
+            @Html.ActionLink("Devices", "Devices", new { user = item }) 
           </td>
     </tr>
 }
