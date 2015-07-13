@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using BLL.Entites;
 
 namespace Android_Push_Notifications.Models
 {
-    public class DeviceModel: Device
+    public class DeviceModel
     {
         [Required]
         [Display(Name = "Registration Id")]

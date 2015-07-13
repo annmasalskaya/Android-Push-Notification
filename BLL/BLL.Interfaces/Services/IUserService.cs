@@ -7,7 +7,7 @@ namespace BLL.Interfaces.Services
 {
     public interface IUserService
     {
-        IEnumerable<User> GetAll();
+         IEnumerable<User> GetAll();
          User Create(User user);
     }
 }
