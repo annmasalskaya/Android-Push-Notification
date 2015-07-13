@@ -19,6 +19,11 @@ namespace BLL.Services
             _unit = unit;
         }
 
+        public IEnumerable<User> GetAll()
+        {
+            return _repository.GetAll();
+        }
+
         public User Create(User user)
         {
             var createdUser = _repository.Create(user);
