@@ -1,34 +1,36 @@
-﻿@model Android_Push_Notifications.Models.DeviceModel;
- 
+﻿@model IEnumerable<Android_Push_Notifications.Models.DeviceModel>
+
 @{
     ViewBag.Title = "View";
 }
 
-<h2>View</h2>
+<h2>Devices</h2>
 
 <div>
-    <h4>DeviceModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.RegistrationId)
-        </dt>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imei)
+            </th>
+        </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.RegistrationId)
-        </dd>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistrationId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imei)
+                </td>
+            </tr>
+        }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Imei)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Imei)
-        </dd>
-
-    </dl>
+    </table>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

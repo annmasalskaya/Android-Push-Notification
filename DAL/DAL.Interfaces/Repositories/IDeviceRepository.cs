@@ -1,15 +1,10 @@
-﻿using DAL.Entites;
-using DAL.Interfaces.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using DAL.Entites;
 
-namespace DAL.DAL.Interfaces.Repositories
+namespace DAL.Interfaces.Repositories
 {
-    interface IDeviceRepository : IGenericRepository<Device>
+    public interface IDeviceRepository: IGenericRepository<Device>
     {
-         IEnumerable<Device> GetBy(int userId);
+        IEnumerable<Device> GetBy(int userId);
     }
 }
