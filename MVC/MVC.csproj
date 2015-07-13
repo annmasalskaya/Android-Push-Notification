@@ -142,7 +142,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Icon.png" />
-    <Content Include="RestService.svc" />
+    <Content Include="RestService\RestService.svc" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\npm.js" />
@@ -154,16 +154,16 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="DeviceInfo.cs" />
+    <Compile Include="RestService\DeviceInfo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
-    <Compile Include="IRestService.cs" />
+    <Compile Include="RestService\IRestService.cs" />
     <Compile Include="Models\DeviceModel.cs" />
     <Compile Include="Models\UserModel.cs" />
-    <Compile Include="ResponseModel.cs" />
-    <Compile Include="RestService.svc.cs">
+    <Compile Include="RestService\ResponseModel.cs" />
+    <Compile Include="RestService\RestService.svc.cs">
       <DependentUpon>RestService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
