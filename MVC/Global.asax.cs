@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using AutoMapper;
+using DAL.Entites;
+using Android_Push_Notifications.Models;
 
 namespace Android_Push_Notifications
 {
@@ -13,6 +16,8 @@ namespace Android_Push_Notifications
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Mapper.CreateMap<User, UserModel>();
+            Mapper.CreateMap<UserModel, User>();
         }
     }
 }
