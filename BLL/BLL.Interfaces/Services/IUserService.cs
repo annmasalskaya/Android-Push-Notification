@@ -9,5 +9,8 @@ namespace BLL.Interfaces.Services
     {
          IEnumerable<User> GetAll();
          User Create(User user);
+         User GetBy(string login);
+        
+
     }
 }
