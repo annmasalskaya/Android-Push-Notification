@@ -6,17 +6,19 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Android_Push_Notifications.RestService.Responses;
 
-namespace Android_Push_Notifications
+namespace Android_Push_Notifications.RestService
 {
     [ServiceContract]
     public interface IRestService
     {
         [OperationContract]
-        [WebInvoke(Method = "GET",
+        [WebInvoke(Method = "POST",
+            RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.Wrapped,
+            BodyStyle = WebMessageBodyStyle.Bare,
             UriTemplate = "RegisterDevice")]
-        string RegisterDevice();//(DeviceInfoContract deviceInfo);
+        Response RegisterDevice(DeviceInfoContract deviceInfo);
     }
 }

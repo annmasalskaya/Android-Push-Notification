@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 
-namespace Android_Push_Notifications
+namespace Android_Push_Notifications.RestService
 {
     [DataContract]
     public class DeviceInfoContract

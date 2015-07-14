@@ -1,4 +1,4 @@
 ﻿<%@ ServiceHost Language="C#" Debug="true" 
-    Service="Android_Push_Notifications.RestService"
+    Service="Android_Push_Notifications.RestService.RestService"
      CodeBehind="RestService.svc.cs" 
     Factory="Ninject.Extensions.Wcf.NinjectWebServiceHostFactory" %>

@@ -17,7 +17,7 @@ namespace DAL.Repositories
 
         public User GetBy(string login)
         {
-            return GetBy(u => u.Login == login).First();
+            return GetBy(u => u.Login == login).SingleOrDefault();
         }
     }
 }

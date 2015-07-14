@@ -7,8 +7,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Android_Push_Notifications.RestService.Responses;
 
-namespace Android_Push_Notifications
+namespace Android_Push_Notifications.RestService
 {
     public class RestService : IRestService
     {
@@ -23,15 +24,9 @@ namespace Android_Push_Notifications
             _userService = userService;
 
         }
-         //в браузере :  http://localhost:50538/RestService/RestService.svc/RegisterDevice
-        public string RegisterDevice()
+         //URL POST :   http://localhost:50538/RestService/RestService.svc/RegisterDevice
+        public Response RegisterDevice(DeviceInfoContract deviceInfo)
         {
-            var deviceInfo = new DeviceInfoContract
-            {
-                RegistrationId = "asza",
-                Imei = "adfvcs",
-                UserLogin = "AZazaza"
-            };
             var user = _userService.GetBy(deviceInfo.UserLogin);
             if (user != null)
             {
@@ -42,16 +37,12 @@ namespace Android_Push_Notifications
                     UserId = user.Id
                 };
                 _deviceService.Create(newDevice);
-                string json = JsonConvert.SerializeObject(new ResponseModel() { IsSuccess = true, Message = "Added successfully." });
-                return json;
+                return new SuccessResponse();
             }
             else
             {
-                return JsonConvert.SerializeObject(new ResponseModel() { IsSuccess = false, Message = "User doesn't exist" });
+                return new FailureResponse();
             }
         }
-
-
-
     }
 }

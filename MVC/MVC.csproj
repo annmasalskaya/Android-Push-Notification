@@ -162,7 +162,9 @@
     <Compile Include="RestService\IRestService.cs" />
     <Compile Include="Models\DeviceModel.cs" />
     <Compile Include="Models\UserModel.cs" />
-    <Compile Include="RestService\ResponseModel.cs" />
+    <Compile Include="RestService\Responses\FailureResponse.cs" />
+    <Compile Include="RestService\Responses\Response.cs" />
+    <Compile Include="RestService\Responses\SuccessResponse.cs" />
     <Compile Include="RestService\RestService.svc.cs">
       <DependentUpon>RestService.svc</DependentUpon>
     </Compile>

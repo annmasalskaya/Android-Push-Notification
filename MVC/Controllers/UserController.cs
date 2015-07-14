@@ -46,7 +46,7 @@ namespace Android_Push_Notifications.Controllers
                 _userService.Create(user);
                 
             }
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
         // GET 
