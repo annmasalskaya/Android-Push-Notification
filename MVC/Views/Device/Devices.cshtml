@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Android_Push_Notifications.Models.DeviceModel>
+
+
+<div class="panel panel-default">
+  
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RegistrationId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Imei)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegistrationId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Imei)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Send Notification", "AddNotification","Device", item, new { data_modal = "", @class = "btn btn-primary pull-right" })
+                       
+                    </td>
+
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/bundles/modalform")
+}
+
+
+

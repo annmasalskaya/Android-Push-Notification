@@ -7,6 +7,8 @@ using System.Web.Routing;
 using AutoMapper;
 using DAL.Entites;
 using Android_Push_Notifications.Models;
+using System.Web.Optimization;
+
 
 namespace Android_Push_Notifications
 {
@@ -20,6 +22,7 @@ namespace Android_Push_Notifications
             Mapper.CreateMap<UserModel, User>();
             Mapper.CreateMap<Device, DeviceModel>();
             Mapper.CreateMap<DeviceModel, Device>();
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
 
         }
     }
