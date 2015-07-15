@@ -25,9 +25,7 @@ namespace DependencyResolver
             Bind<IDeviceRepository>().To<DeviceRepository>().InRequestScope();
 
             Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
-            Bind<DbContext>().To<ApplicationDbContext>().InRequestScope();
-
-            
+            Bind<DbContext>().To<ApplicationDbContext>().InRequestScope();      
         }
     }
 }

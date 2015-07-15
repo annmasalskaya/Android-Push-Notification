@@ -11,8 +11,8 @@ namespace Android_Push_Notifications.RestService.Responses
     {
         public FailureResponse()
         {
-            IsSuccess = true;
-            Message = "Added successfully";
+            IsSuccess = false;
+            Message = "Invalid user login";
         }
     }
 }
