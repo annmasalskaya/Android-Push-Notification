@@ -24,7 +24,7 @@ namespace BLL.Services
             gcmContentType = ConfigurationManager.AppSettings["gcm_content_type"];
         }
         
-        public void sendNotification(Device device, string message)
+        public string sendNotification(Device device, string message)
         {
             WebRequest request = WebRequest.Create(gcmUrl);
 
@@ -38,7 +38,7 @@ namespace BLL.Services
                 "&delay_while_idle=1" + 
                 "&data.message=" + message +
                 "&data.time=" + System.DateTime.Now.ToString() +
-                "registration_id=" + device.RegistrationId + "";
+                "&registration_id=" + device.RegistrationId + "";
 
             Byte[] byteArray = Encoding.UTF8.GetBytes(postData);
             request.ContentLength = byteArray.Length;
@@ -47,9 +47,7 @@ namespace BLL.Services
             dataStream.Write(byteArray, 0, byteArray.Length);
             dataStream.Close();
 
-            /* For getting serer response uncoment this line and use
-             * responseFromeServer string as you wish
-             * 
+           
             WebResponse response = request.GetResponse();
             dataStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(dataStream);
@@ -59,7 +57,8 @@ namespace BLL.Services
             reader.Close();
             dataStream.Close();
             response.Close();
-            */
+
+            return responseFromServer;        
         }
     }
 }

@@ -4,6 +4,6 @@ namespace BLL.Interfaces.Services
 {
     public interface INotificationService
     {
-        void sendNotification(Device device, string message);
+        string sendNotification(Device device, string message);
     }
 }
