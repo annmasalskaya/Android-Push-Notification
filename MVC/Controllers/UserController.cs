@@ -29,7 +29,7 @@ namespace Android_Push_Notifications.Controllers
             var usersModel = AutoMapper.Mapper.Map<IEnumerable<User>, IEnumerable<UserModel>>(users);
             return View(usersModel);
         }
-
+        
         // GET: User/Create
         public ActionResult Create()
         {
@@ -49,13 +49,6 @@ namespace Android_Push_Notifications.Controllers
             return RedirectToAction("Index");
         }
 
-        // GET 
-        public ActionResult Devices(UserModel userModel)
-        {
-            var user = AutoMapper.Mapper.Map<User>(userModel);
-            var devices = _deviceService.GetAllByUser(user);
-            var devicesModel = AutoMapper.Mapper.Map<IEnumerable<Device>, IEnumerable<DeviceModel>>(devices);
-            return View(devicesModel);
-        }      
+        
     }
 }

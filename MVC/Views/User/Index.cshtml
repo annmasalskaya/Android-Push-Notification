@@ -1,37 +1,47 @@
 ﻿@model IEnumerable<Android_Push_Notifications.Models.UserModel>
 
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
 
-<h2>Users</h2>
+    @using (Html.BeginForm())
+{
+        @Html.AntiForgeryToken()
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Login)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th></th>
-    </tr>
+        <div class="form-horizontal">
+            <h4>UserModel</h4>
+            <hr />
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Login)
+                    </th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Login)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.ActionLink("Show devices", "Devices", item) 
-          </td>
-    </tr>
-}
+                    <th>Devices</th>
+                </tr>
 
-</table>
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Login)
+                        </td>
+
+                        <td>
+                            @Html.Action("Devices", "Device", item)
+                        
+                        </td>
+                    </tr>
+            }
+            </table>
+
+            </div>
+            }
+           
