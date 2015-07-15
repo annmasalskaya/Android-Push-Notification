@@ -23,7 +23,7 @@ namespace Android_Push_Notifications.Controllers
         
         public ActionResult SendNotification(DeviceModel deviceModel, string message)
         {
-            var device = AutoMapper.Mapper.Map<Device, DeviceModel>(deviceModel);
+            var device = AutoMapper.Mapper.Map<Device>(deviceModel);
             _notificationService.sendNotification(device, message);
             return View();
         }

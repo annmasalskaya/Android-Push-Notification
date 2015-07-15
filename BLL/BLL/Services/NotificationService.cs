@@ -26,7 +26,7 @@ namespace BLL.Services
         
         public void sendNotification(Device device, string message)
         {
-            WebRequest request = WebRequest.Create(gcmMethod);
+            WebRequest request = WebRequest.Create(gcmUrl);
 
             request.Method = gcmMethod;
             request.ContentType = gcmContentType;
