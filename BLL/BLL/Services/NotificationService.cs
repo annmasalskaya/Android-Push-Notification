@@ -19,7 +19,7 @@ namespace BLL.Services
         public NotificationService(){
             appId = ConfigurationManager.AppSettings["application_id"];
             senderId = ConfigurationManager.AppSettings["sender_id"];
-            gcmMethod = ConfigurationManager.AppSettings["gcm_url"];
+            gcmUrl = ConfigurationManager.AppSettings["gcm_url"];
             gcmMethod = ConfigurationManager.AppSettings["gcm_method"];
             gcmContentType = ConfigurationManager.AppSettings["gcm_content_type"];
         }
