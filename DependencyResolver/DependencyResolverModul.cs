@@ -19,6 +19,7 @@ namespace DependencyResolver
         {
             Bind<IUserService>().To<UserService>();
             Bind<IDeviceService>().To<DeviceService>();
+            Bind<INotificationService>().To<NotificationService>().InRequestScope();
 
             Bind<IUserRepository>().To<UserRepository>().InRequestScope();
             Bind<IDeviceRepository>().To<DeviceRepository>().InRequestScope();
