@@ -38,7 +38,7 @@ namespace BLL.Services
                 "&delay_while_idle=1" + 
                 "&data.message=" + message +
                 "&data.time=" + System.DateTime.Now.ToString() +
-                "&registration_id=" + appId;
+                "registration_id=" + device.RegistrationId + "";
 
             Byte[] byteArray = Encoding.UTF8.GetBytes(postData);
             request.ContentLength = byteArray.Length;
