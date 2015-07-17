@@ -26,7 +26,7 @@ namespace Android_Push_Notifications.Controllers
             var device = AutoMapper.Mapper.Map<Device>(deviceModel);
             var responce = _notificationService.sendNotification(device, message);
             ViewBag.responce = responce;
-            return View();
+            return PartialView("SendNotification", deviceModel);
         }
 
         public ActionResult AddNotification(DeviceModel device)

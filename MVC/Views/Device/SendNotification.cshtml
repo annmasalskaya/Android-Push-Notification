@@ -9,25 +9,7 @@
 @using (Html.BeginForm("SendNotification", "Device", Model ,FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <div class="modal-body">
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.RegistrationId)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.RegistrationId)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Imei)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Imei)
-            </dd>
-
-
-        </dl>
+        
         @Html.AntiForgeryToken()
         <div class="form-horizontal">
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
