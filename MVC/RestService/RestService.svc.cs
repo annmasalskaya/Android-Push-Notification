@@ -1,5 +1,5 @@
 ﻿using BLL.Interfaces.Services;
-using DAL.Entites;
+using BLL.Entites;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using Android_Push_Notifications.RestService.Responses;
+
 
 namespace Android_Push_Notifications.RestService
 {
@@ -34,7 +35,7 @@ namespace Android_Push_Notifications.RestService
                 {
                     RegistrationId = deviceInfo.RegistrationId,
                     Imei = deviceInfo.Imei,
-                    UserId = user.Id
+                    User = user
                 };
                 _deviceService.Create(newDevice);
                 return new SuccessResponse();

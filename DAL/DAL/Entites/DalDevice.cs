@@ -2,9 +2,9 @@
 
 namespace DAL.Entites
 {
-    public class Device : BaseEntity
+    public class DalDevice : BaseEntity
     {
-        public int UserId { get; set; }
+        public DalUser User { get; set; }
 
         public string RegistrationId { get; set; }
         

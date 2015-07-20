@@ -8,8 +8,6 @@ namespace Android_Push_Notifications.Models
 {
     public class UserModel
     {
-        public int Id { get; set; }
-        
         [Required]
         [DataType(DataType.Text)]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Length must be from 3 to 50 symbols")]
@@ -18,5 +16,7 @@ namespace Android_Push_Notifications.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        public  ICollection<DeviceModel> Devices { get; set; }
     }
 }

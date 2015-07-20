@@ -8,8 +8,8 @@ namespace DAL.ApplicationDbContext
 {
     public class ApplicationDbContext : DbContext
     {
-        DbSet<User> users { get; set; }
-        DbSet<Device> devices { get; set; }
+        DbSet<DalUser> Users { get; set; }
+        DbSet<DalDevice> Devices { get; set; }
 
         public ApplicationDbContext () :base("name=ApplicationDbContext")
         {

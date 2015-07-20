@@ -5,6 +5,8 @@ using BLL.Interfaces.Services;
 using DAL.Entites;
 using DAL.Interfaces.Repositories;
 using DAL.Interfaces.UnitOfWork;
+using BLL.Entites;
+using AutoMapper;
 
 namespace BLL.Services
 {
@@ -17,24 +19,32 @@ namespace BLL.Services
         {
             _repository = repository;
             _unit = unit;
+            Mapper.CreateMap<User, DalUser>();
+            Mapper.CreateMap<DalUser, User>();
         }
 
         public IEnumerable<User> GetAll()
         {
-            return _repository.GetAll();
+            var dalUsers = _repository.GetAll();
+            var users = AutoMapper.Mapper.Map<IEnumerable<DalUser>, IEnumerable<User>>(dalUsers);
+            return users;
         }
 
 
         public User GetBy(string login)
         {
-            return _repository.GetBy(login);
+            var dalUser = _repository.GetBy(login);
+            var user = AutoMapper.Mapper.Map<User>(dalUser);
+            return user;
         }
 
-        public User Create(User user)
+        public User Create(User user,string Password)
         {
-            var createdUser = _repository.Create(user);
+            var dalUser = AutoMapper.Mapper.Map<DalUser>(user);
+            dalUser.Password = Password;
+            var createdUser = _repository.Create(dalUser);
             _unit.Commit();
-            return createdUser;
+            return AutoMapper.Mapper.Map<User>(createdUser);
         }
     }
 }

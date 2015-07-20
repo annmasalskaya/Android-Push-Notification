@@ -1,4 +1,5 @@
-﻿using DAL.Entites;
+﻿using BLL.Entites;
+using DAL.Entites;
 
 namespace BLL.Interfaces.Services
 {

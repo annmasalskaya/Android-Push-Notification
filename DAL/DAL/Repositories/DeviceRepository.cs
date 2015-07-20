@@ -7,7 +7,7 @@ using DAL.Entites;
 
 namespace DAL.Repositories
 {
-    public class DeviceRepository : GenericRepository<Device>, IDeviceRepository
+    public class DeviceRepository : GenericRepository<DalDevice>, IDeviceRepository
     {
         public DeviceRepository(DbContext context)
             : base(context)
@@ -15,9 +15,6 @@ namespace DAL.Repositories
 
         }
 
-        public IEnumerable<Device> GetBy(int userId)
-        {
-            return GetBy(d => d.UserId == userId);
-        }
+     
     }
 }

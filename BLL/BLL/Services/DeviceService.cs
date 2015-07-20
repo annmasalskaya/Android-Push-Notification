@@ -6,6 +6,8 @@ using BLL.Interfaces.Services;
 using DAL.Entites;
 using DAL.Interfaces.Repositories;
 using DAL.Interfaces.UnitOfWork;
+using AutoMapper;
+using BLL.Entites;
 
 namespace BLL.Services
 {
@@ -18,21 +20,21 @@ namespace BLL.Services
         {
            _deviceRepository = deviceRepository;
            _unit = unit;
+           Mapper.CreateMap<Device, DalDevice>();
+           Mapper.CreateMap<DalDevice, Device>();
         }
-        //TODO use DeviceViewModel ?
+       
         public Device Create(Device device)
         {
-            
-               var newDevice = _deviceRepository.Create(device);
+
+            var dalDevice = AutoMapper.Mapper.Map<DalDevice>(device);
+            var newDevice = _deviceRepository.Create(dalDevice);
                _unit.Commit();
-               return newDevice;
+            return AutoMapper.Mapper.Map<Device>(newDevice); 
            
         }
 
-        // TODO List<Device> ?
-        public IEnumerable<Device> GetAllByUser(User user)
-        {
-            return _deviceRepository.GetBy(user.Id);
-        }
+      
+       
     }
 }

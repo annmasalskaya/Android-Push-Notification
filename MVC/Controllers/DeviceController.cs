@@ -1,4 +1,5 @@
 ﻿using Android_Push_Notifications.Models;
+using BLL.Entites;
 using BLL.Interfaces.Services;
 using DAL.Entites;
 using System;
@@ -37,10 +38,8 @@ namespace Android_Push_Notifications.Controllers
         // GET 
         public ActionResult Devices(UserModel userModel )
         {
-            var user = AutoMapper.Mapper.Map<User>(userModel);
-            var devices = _deviceService.GetAllByUser(user);
-            var devicesModel = AutoMapper.Mapper.Map<IEnumerable<Device>, IEnumerable<DeviceModel>>(devices);
-            return PartialView("Devices",devicesModel);
+            var devices = userModel.Devices;
+            return PartialView("Devices",devices);
         }    
     }
 }

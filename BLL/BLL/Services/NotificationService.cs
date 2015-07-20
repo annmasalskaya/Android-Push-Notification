@@ -4,7 +4,7 @@ using System.Text;
 using System.Configuration;
 using System.Net;
 using BLL.Interfaces.Services;
-using DAL.Entites;
+using BLL.Entites;
 
 namespace BLL.Services
 {

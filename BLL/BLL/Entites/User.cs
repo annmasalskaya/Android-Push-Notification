@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DalUser = DAL.Entites.User;
 
 namespace BLL.Entites
 {
-    public class User : DalUser
+    public class User
     {
+        public string Login { get; set; }
+        
+        public virtual ICollection<Device> Devices { get; set; }
     }
 }

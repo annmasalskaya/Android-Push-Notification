@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using DAL.Entites;
+using BLL.Entites;
 
 namespace Android_Push_Notifications.Controllers
 {
@@ -43,7 +43,7 @@ namespace Android_Push_Notifications.Controllers
             if(ModelState.IsValid)
             {
                 var user = AutoMapper.Mapper.Map<User>(userModel);
-                _userService.Create(user);
+                _userService.Create(user,userModel.Password);
                 
             }
             return RedirectToAction("Index");

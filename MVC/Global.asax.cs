@@ -5,9 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using AutoMapper;
-using DAL.Entites;
 using Android_Push_Notifications.Models;
 using System.Web.Optimization;
+using BLL.Entites;
+
 
 
 namespace Android_Push_Notifications
